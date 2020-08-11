@@ -29,7 +29,6 @@ class Hyperparamters:
     # Load vocabulcary dict
     dict_id2label,dict_label2id = load_vocabulary(os.path.join(pwd,'data','vocabulary_label.txt'))
     label_vocabulary = list(dict_id2label.values())
-#    third_fourth_pos_dict,fourth_third_neg_dict = load_third_fourth_dict(os.path.join(pwd,'data','notebook_fourth_label.xlsx'))
     
     # Optimization parameters
     num_train_epochs = 50
@@ -63,7 +62,7 @@ class Hyperparamters:
 if __name__ == '__main__': 
     #
     hp = Hyperparamters()
-#    print(hp.third_fourth_pos_dict)
+
 
 
     

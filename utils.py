@@ -92,31 +92,6 @@ def load_vocabulary(file_vocabulary_label):
     return dict_id2label,dict_label2id
 
 
-#def load_third_fourth_dict(file_third_fourth):
-#    df = pd.read_excel(file_third_fourth).fillna("")
-#    print('Number of third class label:', len(df))
-#    third_class = df['third_class_label'].tolist()
-#    fourth_class_positif = df['fourth_class_label_positif'].tolist()
-#    fourth_class_negatif = df['fourth_class_label_negatif'].tolist()
-#    third_fourth_positif_dict = {}
-#    third_fourth_negatif_dict = {}
-#    for i in range(len(third_class)):
-#        third_fourth_positif_dict[third_class[i].strip()] = fourth_class_positif[i].strip()
-#        third_fourth_negatif_dict[third_class[i].strip()] = fourth_class_negatif[i].strip()
-#    return third_fourth_positif_dict,third_fourth_negatif_dict
-
-
-#def load_third_sa_dict(phrase_sa_map_file):
-#    df = pd.read_excel(phrase_sa_map_file).fillna("")
-#    print('Total number of phrase:', len(df))
-#    phrase = df['三级标签'].tolist()
-#    sa = df['情感倾向'].tolist()
-#    phrase_sa_dict = {}
-#    for i in range(len(phrase)):
-#        phrase_sa_dict[phrase[i]] = sa[i]
-#    return phrase_sa_dict
-
-
 
 if __name__ == '__main__': 
     print('')

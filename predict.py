@@ -79,15 +79,6 @@ if __name__ == '__main__':
     print(end-start)#57ms
     
 
-#    third_class = get_notebook_label(sent)
-#    print('third_class:',third_class)
-#    sa = 0
-#    fourth_class = get_fourth_by_third_and_sa(third_class,sa) 
-#    print('fourth_class:',fourth_class)
-
-
-
-    
     
     
     

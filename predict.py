@@ -11,7 +11,6 @@ import os
 pwd = os.path.dirname(os.path.abspath(__file__))
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-#sys.path.append('/home/work/leek')
 import numpy as np
 import tensorflow as tf
 from classifier_multi_label.networks import NetworkAlbert
@@ -44,7 +43,6 @@ MODEL = ModelAlbertTextCNN()
 print('Load model finished!')
 
 
-
 def get_label(sentence):
     """
     Prediction of the sentence's label.
@@ -70,43 +68,17 @@ def get_label_multi(sentences):
     predictions = MODEL.sess.run(MODEL.albert.predictions, feed_dict=fd) 
     return [[id2label(l) for l in np.where(prediction==1)[0] if l!=0]  for prediction in predictions]   
 
-#
-#def get_fourth_by_third_and_sa(third_class,sa):
-#    fourth_class = []
-#    for l in third_class:
-#        if sa == 1:
-#            if hp.third_fourth_pos_dict.get(l):        
-#                fourth_class.append(hp.third_fourth_pos_dict.get(l))
-#        elif sa == -1:
-#            if hp.fourth_third_neg_dict.get(l):        
-#                fourth_class.append(hp.fourth_third_neg_dict.get(l))
-#        #elif sa == 0:
-#        #     return ''
-#    return fourth_class
 
-
-    
 
 if __name__ == '__main__':
-   #for i in range(100): 
     import time
     start = time.time()
     sent = '制热效果很差劲 开到一档就很暖和了'
-    #sent = '手机很好看'
     print(get_label(sent))
     end = time.time()
     print(end-start)#57ms
     
-#    ##
-#    sent = '品牌很好'
-#    sent2 = '风扇噪音大'
-#    sent3 = '11'
-#    sent4 = '外观漂亮金属质感就是不一样'
-#    print(get_notebook_label(sent3))
-#    #print(get_notebook_label00(sent3))
-#    print(get_notebook_label_multi([sent,sent2,sent,sent3,sent4]))
-#    ##
-#    sent = '品牌很好'
+
 #    third_class = get_notebook_label(sent)
 #    print('third_class:',third_class)
 #    sa = 0

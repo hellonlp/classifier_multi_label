@@ -20,7 +20,7 @@ from classifier_multi_label.hyperparameters import Hyperparamters as hp
 
 class ModelAlbertTextCNN(object,):
     """
-    加载 NetworkAlbert 神经网络模型
+    Load NetworkAlbert Model
     """
     def __init__(self):
         self.albert, self.sess = self.load_model()

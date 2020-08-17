@@ -54,21 +54,7 @@ def get_label(sentence):
           }
     prediction = MODEL.sess.run(MODEL.albert.predictions, feed_dict=fd)[0]   
     return [id2label(l) for l in np.where(prediction==1)[0] if l!=0]    
-      
-
-    
-def get_label_multi(sentences):
-    """
-    Prediction of some sentence's labels.
-    """
-    features = [get_feature_test(str(sentence)) for sentence in sentences ]
-    fd = {MODEL.albert.input_ids: [feature[0] for feature in features],
-          MODEL.albert.input_masks: [feature[1] for feature in features],
-          MODEL.albert.segment_ids:[feature[2] for feature in features]}    
-    predictions = MODEL.sess.run(MODEL.albert.predictions, feed_dict=fd) 
-    return [[id2label(l) for l in np.where(prediction==1)[0] if l!=0]  for prediction in predictions]   
-
-
+     
 
 if __name__ == '__main__':
     import time

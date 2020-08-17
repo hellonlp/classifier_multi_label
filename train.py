@@ -19,8 +19,6 @@ pwd = os.path.dirname(os.path.abspath(__file__))
 MODEL = NetworkAlbert(is_training=True)
 
 
-
-
 # Get data features
 input_ids,input_masks,segment_ids,label_ids = get_features()
 num_train_samples = len(input_ids)

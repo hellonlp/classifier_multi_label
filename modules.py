@@ -38,7 +38,6 @@ def cell_textcnn(inputs,is_training):
                                         padding='VALID',
                                         name="pool")
                 pooled_outputs.append(pooled)
-                print('=== pooled ===',pooled)
     # Combine all the pooled features
     num_filters_total = hp.num_filters * len(hp.filter_sizes)
     h_pool = tf.concat(pooled_outputs, 3)

@@ -60,9 +60,9 @@ class NetworkAlbert(object):
 
         with tf.variable_scope("Prediction"):             
             # Prediction               
-            zero = tf.zeros_like(logits)  
-            one = tf.ones_like(logits)       
-            self.predictions = tf.where(logits <0.5, x=zero, y=one)    
+            zero = tf.zeros_like(self.probabilities)
+            one = tf.ones_like(self.probabilities)
+            self.predictions = tf.where(self.probabilities < 0.5, x=zero, y=one)
             
         with tf.variable_scope("loss"):            
             # Summary for tensorboard

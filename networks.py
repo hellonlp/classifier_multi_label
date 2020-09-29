@@ -89,10 +89,8 @@ class NetworkAlbert(object):
             # Loss and Optimizer
             if self.is_training:
                 # Global_step
-                self.global_step = tf.Variable(0, name='global_step', trainable=False)
-                    
+                self.global_step = tf.Variable(0, name='global_step', trainable=False)             
                 per_example_loss = tf.nn.sigmoid_cross_entropy_with_logits(labels=self.label_ids,logits=logits)
-                print('per_example_loss:',per_example_loss)
                 self.loss = tf.reduce_mean(per_example_loss)
 
                 # Optimizer BERT

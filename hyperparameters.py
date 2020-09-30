@@ -13,6 +13,7 @@ from classifier_multi_label.utils import load_vocabulary#,load_third_fourth_dict
 
 class Hyperparamters:
     # Train parameters
+    num_train_epochs = 20
     print_step = 10 
     batch_size = 8           
     summary_step = 10
@@ -29,13 +30,11 @@ class Hyperparamters:
     train_data = 'train_onehot.csv'
     test_data = 'test_onehot.csv'
     
-    
     # Load vocabulcary dict
     dict_id2label,dict_label2id = load_vocabulary(os.path.join(pwd,'data','vocabulary_label.txt'))
     label_vocabulary = list(dict_id2label.values())
     
     # Optimization parameters
-    num_train_epochs = 50
     warmup_proportion = 0.1    
     use_tpu = None
     do_lower_case = True    
@@ -64,7 +63,6 @@ class Hyperparamters:
     
 
 if __name__ == '__main__': 
-    #
     hp = Hyperparamters()
 
 

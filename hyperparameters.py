@@ -13,7 +13,7 @@ from classifier_multi_label.utils import load_vocabulary#,load_third_fourth_dict
 
 class Hyperparamters:
     # Train parameters
-    num_train_epochs = 20
+    num_train_epochs = 5
     print_step = 10 
     batch_size = 8           
     summary_step = 10

@@ -13,9 +13,9 @@ from classifier_multi_label.utils import load_vocabulary#,load_third_fourth_dict
 
 class Hyperparamters:
     # Train parameters
-    num_train_epochs = 5
+    num_train_epochs = 40
     print_step = 10 
-    batch_size = 8           
+    batch_size = 32           
     summary_step = 10
     num_saved_per_epoch = 3
     max_to_keep = 100

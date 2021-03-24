@@ -56,12 +56,16 @@ def get_label(sentence):
      
 
 if __name__ == '__main__':
-    import time
-    start = time.time()
-    sent = '制热效果很差劲 开到一档就很暖和了'
-    print(get_label(sent))
-    end = time.time()
-    print(end-start)#57ms
+    # Test
+    sentences = ['耗电情况：整体来说耗电不是特别严重',
+     '取暖效果：取暖效果好',
+     '取暖效果：开到二挡很暖和',
+     '一个小时房间仍然没暖和',
+     '开着坐旁边才能暖和']
+    for sentence in sentences:
+         print(sentence,get_label(sentence))
+    
+       
     
 
     
